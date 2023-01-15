@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Created by Debamrita Paul-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div class="header">
+        <h1>QR Code Generator</h1>
+        <p>Past a url or enter text to create QR code</p>
+      </div>
+
+      <form id="url_form" class="form">
+        <input id="url" type="text" placeholder="Enter the url here" />
+        <input type="submit" id="generete" value="Generate QR Code" />
+      </form>
+
+      <div class="qr-code">
+        <div class="qr-image">
+          <img
+            id="qr-code"
+            src="#"
+            alt="QR Code || Please check your internet connection :("
+          />
+        </div>
+      </div>
+      <a id="download-btn" href="" download="QR-Code">
+        <div class="download-btn">Download</div>
+      </a>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
