@@ -1,8 +1,4 @@
 :root {
-  --hard: #374151;
-  --harder: #1f2937;
-  --hardest: #111827;
-
   --dark: #374151;
   --darker: #1f2937;
   --darkest: #111827;
@@ -35,6 +31,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-color: var(--darker);
+  overflow: hidden;
 }
 
 .container {
@@ -64,7 +61,7 @@ body {
 .form {
   margin: 20px 0 30px;
 }
-.form :where(input) {
+.form input {
   width: 100%;
   height: 55px;
   outline: none;
@@ -76,9 +73,8 @@ body {
   padding: 0 17px;
   border: 1px solid var(--dark);
 }
-/* linear-gradient(90deg, #03001e 0%, #7303c0 33%, #ec38bc 66%, #fdeff9 100%) */
 
-.form #generete {
+.form #generate {
   margin: 20px 0 0 0;
   margin-bottom: 0;
   font-size: 20px;
@@ -86,10 +82,7 @@ body {
   background-image: linear-gradient(
     to right,
     var(--black),
-    var(--black),
     var(--blue),
-    var(--blue),
-    var(--black),
     var(--black)
   );
   -webkit-background-clip: text;
@@ -99,11 +92,11 @@ body {
   transition: 0.4s;
 }
 
-.form #generete:hover {
+.form #generate:hover {
   opacity: 0.8;
 }
 
-.form #generete:active {
+.form #generate:active {
   opacity: 0.6;
 }
 
@@ -134,6 +127,7 @@ body {
   cursor: pointer;
 }
 .download-btn {
+  display: none;
   border-radius: 5px;
   margin-top: 5px;
   padding: 5px 0;
@@ -156,10 +150,9 @@ body {
 .container.active .qr-code {
   opacity: 1;
   pointer-events: auto;
-  transition: opacity 0.5s 0.05s ease;
 }
 .container.active .download-btn {
   opacity: 1;
   pointer-events: auto;
-  transition: opacity 0.5s 0.05s ease;
+  display: grid;
 }
